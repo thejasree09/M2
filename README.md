@@ -1,4 +1,6 @@
-# EX-06 - Looping
+## NAME:theja sree g
+## Register Number:212224110056
+## EX-06 - Looping
 ## AIM:
 Write a C program to print even numbers ranging from M to N (including M and N values).
 
@@ -12,18 +14,31 @@ Write a C program to print even numbers ranging from M to N (including M and N v
 7.	Continue the loop until you have iterated through all numbers from M to N.
 
 ## PROGRAM:
+```
+#include <stdio.h>
 
+int main() {
+    int M, N, i;
+    
+    printf("Enter the value of M: ");
+    scanf("%d", &M);
+    
+    printf("Enter the value of N: ");
+    scanf("%d", &N);
+    
+    printf("Even numbers from %d to %d are:\n", M, N);
+    
+    for (i = M; i <= N; i++) {
+        if (i % 2 == 0) {
+            printf("%d ", i);
+        }
+    }
+    
+    return 0;
+}
+```
 ## OUTPUT:
-
-
-
-
-
-
-
-
-
-
+![Screenshot 2025-04-27 143652](https://github.com/user-attachments/assets/6f4f2f8f-c5ea-406d-b186-f8cfff662e16)
 ## RESULT:
 Thus the program to print even numbers ranging from M to N (including M and N values) has been executed successfully
  
@@ -45,11 +60,27 @@ Write a C program to print the given triangular pattern using loop.
 5.	Continue the loop until you have printed the entire triangular pattern.
 
 ## PROGRAM:
+```
+#include <stdio.h>
 
-
+int main() {
+    int rows, i, j;
+    
+    printf("Enter the number of rows: ");
+    scanf("%d", &rows);
+    
+    for (i = 1; i <= rows; i++) {
+        for (j = 1; j <= i; j++) {
+            printf("* ");
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
+```
 ## OUTPUT:
-
-
+![Screenshot 2025-04-27 143839](https://github.com/user-attachments/assets/e658ee5a-4484-459f-b882-5428a1191ef7)
 
 
 
@@ -74,15 +105,34 @@ Write a C program to perform addition and subtraction of two numbers using funct
 4.	Call the addition and subtraction functions, passing the two numbers as arguments.
 
 ## PROGRAM:
+```
+#include <stdio.h>
 
+void addition(int a, int b) {
+    printf("Addition = %d\n", a + b);
+}
 
+void subtraction(int a, int b) {
+    printf("Subtraction = %d\n", a - b);
+}
+
+int main() {
+    int num1, num2;
+    
+    printf("Enter two numbers: ");
+    scanf("%d%d", &num1, &num2);
+    
+    addition(num1, num2);
+    subtraction(num1, num2);
+    
+    return 0;
+}
+```
 ## OUTPUT:
+![Screenshot 2025-04-27 144303](https://github.com/user-attachments/assets/4c680594-f14a-4c0d-88b3-e64da1f6589a)
 
 
-
-
-
-
+![Screenshot 2025-04-27 144212](https://github.com/user-attachments/assets/596bebdb-e3ea-4c46-840f-ccdc165da3ed)
 ## RESULT:
 
 Thus the program to perform addition and subtraction of two numbers using functions has been executed successfully
@@ -106,11 +156,31 @@ Write a c program to find the sum of odd digits using for loop
 6.	Print the sum of odd digits.
 
 ## PROGRAM:
+```
+#include <stdio.h>
 
-
+int main() {
+    int num, sum = 0, digit;
+    
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    
+    for (; num != 0; num /= 10) {
+        digit = num % 10;
+        if (digit % 2 != 0) {
+            sum += digit;
+        }
+    }
+    
+    printf("Sum of odd digits = %d\n", sum);
+    
+    return 0;
+}
+```
 ## OUTPUT:
+![Screenshot 2025-04-27 144447](https://github.com/user-attachments/assets/727c7b83-ac92-4b5e-898e-e40ada854827)
 
-
+![Screenshot 2025-04-27 144525](https://github.com/user-attachments/assets/d8c50aea-f92d-4bc7-9301-44dd8ee738f4)
 
 
 ## RESULT:
@@ -120,7 +190,7 @@ Thus the program to find the sum of odd digits using for loop has been executed 
 
 
 
-# EX – 10 - Factorial of a Number Using a Function
+## EX – 10 - Factorial of a Number Using a Function
 ## AIM:
 To write a C program that calculates the factorial of a given number using a user-defined function.
 ## ALGORITHM:
@@ -136,9 +206,34 @@ d.	After the loop, print the factorial value.
 5.	End
 
 ## PROGRAM:
+```
+#include <stdio.h>
 
+void fact() {
+    int N, i;
+    unsigned long long fact = 1;
+    
+    printf("Enter a number: ");
+    scanf("%d", &N);
+    
+    for (i = 1; i <= N; i++) {
+        fact *= i;
+    }
+    
+    printf("Factorial of %d is %llu\n", N, fact);
+}
 
+int main() {
+    fact();
+    return 0;
+}
+```
 ## OUTPUT:
+![Screenshot 2025-04-27 144648](https://github.com/user-attachments/assets/af25b423-801c-4a77-ba17-11e7eeda3be5)
+
+![Screenshot 2025-04-27 144722](https://github.com/user-attachments/assets/6888a1fb-99ff-4f49-a3ed-84a586be738f)
+
+
 
 ## RESULT:
 The program correctly computes the factorial of a given number using a separate function and displays the result.
